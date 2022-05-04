@@ -1,0 +1,16 @@
+<html>
+<body>
+<script>
+function replaceQueryString(url, name, value) {
+	const re = new RegExp(name + '=[^&]*', 'gi')
+	return url.replace(re, `${name}=${value}`)
+}
+
+url = 'http://aaa.com?worktableid=bbb&worktableida=vp&worktablegroupid=aaa'
+console.log(replaceQueryString(url, 'worktableid', 'haha'))
+
+
+
+</script>
+</body>
+</html>
